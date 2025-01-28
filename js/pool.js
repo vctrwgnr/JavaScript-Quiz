@@ -230,7 +230,7 @@ const card7 = new Card(7, 'What is the correct way to access the height property
 
 const card8 = new Card(8, 'What is the correct way to check if a number is an integer in JavaScript?', 1, [answer29, answer30, answer31, answer32]);
 
-const card9 = new Card(9, 'What will appear on the console after executing the following code?\n\n1. let shape1 = {x: 100, y: 200};\n2. let shape2 = shape1;\n3. shape2.x = 0;\n4. console.log(`${shape1.x} ${shape2.y}`);', 1, [answer33, answer34, answer35, answer36]);
+const card9 = new Card(9, 'What will appear on the console after executing the following code?\n\n let shape1 = {x: 100, y: 200};\n let shape2 = shape1;\n shape2.x = 0;\n console.log(`${shape1.x} ${shape2.y}`);', 1, [answer33, answer34, answer35, answer36]);
 
 const card10 = new Card(10, 'What will be the value of foo after executing the following code:\n\nlet obj = {a: 1};\nlet foo = obj;\nobj.a = 2;', 1, [answer37, answer38, answer39, answer40]);
 

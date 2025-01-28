@@ -2,7 +2,7 @@ import {Card} from "./Card.js";
 import {CardBox} from "./CardBox.js";
 import {Answer} from "./Answer.js";
 import {CardPool} from "./CardPool.js";
-import {quizContainer, questionEl, answerEls, previousBtn, checkBtn, nextBtn, load1120} from './variables.js';
+import {quizContainer, questionEl, answerEls, previousBtn, checkBtn, nextBtn, load1to10, load11to20, load21to30, questionIdEl} from './variables.js';
 
 import {
     card1, card2, card3, card4, card5, card6, card7, card8, card9, card10,
@@ -27,15 +27,23 @@ import {
 }
 howManyCardYouWant();*/
 const cardBox1 = new CardBox(1);
+load1to10.addEventListener('click', (e) => {
+    cardBox1.loadCards([card1, card2, card3, card4, card5, card6, card7, card8, card9, card10]);
+
+})
 cardBox1.loadCards([card1, card2, card3, card4, card5, card6, card7, card8, card9, card10]);
 
-/*//experiment
+//experiment
 const cardBox2 = new CardBox(1);
-load1120.addEventListener('click', (e) => {
+load11to20.addEventListener('click', (e) => {
     cardBox1.loadCards([card11, card12, card13, card14, card15, card16, card17, card18, card19, card20]);
 
-})*/
+})
+const cardBox3 = new CardBox(1);
+load21to30.addEventListener('click', (e) => {
+    cardBox1.loadCards([card21, card22, card23, card24, card25, card26, card27, card28, card29, card30]);
 
+})
 
 
 //Pool logic
@@ -46,7 +54,7 @@ console.log(cardBox1);
 const cardPool = new CardPool();
 
 function loadCardsDynamically(){
-    for(let i = 1; i < arrayLength; i++){
+    for(let i = 1; i <= arrayLength; i++){
         cardPool.loadCard('card' + i);
     }
 }
@@ -70,6 +78,7 @@ let globalCorrectAnswer;
 function loadContent() {
     const currentCard = cardBox1.cards[currentIndex];
     questionEl.innerHTML = currentCard.question;
+    questionIdEl.innerHTML = currentCard.id;
     answerEls.forEach((el, index) => {
         el.innerHTML = currentCard.answers[index].text;
         if (currentCard.answers[index].correct === true) {
@@ -118,4 +127,5 @@ previousBtn.addEventListener("click", (e) => {
     answerEls.forEach(answer => answer.classList.remove('selected'));
     loadContent();
 })
+
 
