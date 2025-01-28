@@ -2,7 +2,7 @@ import {Card} from "./Card.js";
 import {CardBox} from "./CardBox.js";
 import {Answer} from "./Answer.js";
 import {CardPool} from "./CardPool.js";
-import {quizContainer, questionEl, answerEls, previousBtn, checkBtn, nextBtn} from './variables.js';
+import {quizContainer, questionEl, answerEls, previousBtn, checkBtn, nextBtn, load1120} from './variables.js';
 
 import {
     card1, card2, card3, card4, card5, card6, card7, card8, card9, card10,
@@ -27,12 +27,21 @@ import {
 }
 howManyCardYouWant();*/
 const cardBox1 = new CardBox(1);
-cardBox1.loadCards([card1, card2, card3, card4, card5, card6, card7, card8]);
+cardBox1.loadCards([card1, card2, card3, card4, card5, card6, card7, card8, card9, card10]);
+
+/*//experiment
+const cardBox2 = new CardBox(1);
+load1120.addEventListener('click', (e) => {
+    cardBox1.loadCards([card11, card12, card13, card14, card15, card16, card17, card18, card19, card20]);
+
+})*/
+
+
 
 //Pool logic
 const arrayLength = cardBox1.getCardCount();
 
-/*console.log(cardBox1);*/
+console.log(cardBox1);
 
 const cardPool = new CardPool();
 
@@ -45,7 +54,7 @@ loadCardsDynamically();
 
 /*cardPool.loadCard(card1);*/
 
-/*console.log(cardPool);*/
+console.log(cardPool);
 
 
 

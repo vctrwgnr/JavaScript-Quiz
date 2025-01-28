@@ -214,43 +214,25 @@ const answer168 = new Answer(168, 'false', false, 42);
 
 
 
-const card1 = new Card(1, 'What expression will return if let shape1 = { x:10, y:20 } and let ' +
-    'shape2 = { x:10, y:20 } have the same property values?', 1,  [answer1, answer2, answer3, answer4]);
+const card1 = new Card(1, 'What expression will return if:\n\nlet shape1 = { x:10, y:20 };\nlet shape2 = { x:10, y:20 };\n\nhave the same property values?', 1, [answer1, answer2, answer3, answer4]);
 
-const card2 = new Card(2, 'What is the output of the following JavaScript code? let num = 5;\n' +
-    'let str = "5"; console.log(num === str);\n', 1,  [answer5, answer6, answer7, answer8]);
+const card2 = new Card(2, 'What is the output of the following JavaScript code?\n\nlet num = 5;\nlet str = "5";\nconsole.log(num === str);\n', 1, [answer5, answer6, answer7, answer8]);
 
-const card3 = new Card(3,'How can you list all the keys of the object "point"?',
-    1, [answer9, answer10, answer11, answer12]);
+const card3 = new Card(3, 'How can you list all the keys of the object "point"?', 1, [answer9, answer10, answer11, answer12]);
 
-const card4 = new Card(4,'What will be the result of executing the following code: ' +
-    'let obj1 = {a: 1};' +
-    'let obj2 = {b: 2};' +
-    'let obj3 = 0bject.assign({c: 3}, obj1, obj2); ' +
-    'console.log(obj3);',
-    1, [answer13, answer14, answer15, answer16]);
+const card4 = new Card(4, 'What will be the result of executing the following code:\n\nlet obj1 = {a: 1};\nlet obj2 = {b: 2};\nlet obj3 = Object.assign({c: 3}, obj1, obj2);\nconsole.log(obj3);', 1, [answer13, answer14, answer15, answer16]);
 
-const card5 = new Card(5,'What will appear on the console after executing the following code? ' +
-    'let book = { title: "To Kill a Mockingbird", author: "Harper Lee" }; ' +
-    'let library = 0bject.assign({}, book, {pages: 324});' +
-    'book.author = "John Doe";' +
-    'console.log(`${library.title} by ${library.author}, ${library.pages} pages`);',
-    1, [answer17, answer18, answer19, answer20]);
+const card5 = new Card(5, 'What will appear on the console after executing the following code?\n\nlet book = { title: "To Kill a Mockingbird", author: "Harper Lee" };\nlet library = Object.assign({}, book, {pages: 324});\nbook.author = "John Doe";\nconsole.log(`${library.title} by ${library.author}, ${library.pages} pages`);', 1, [answer17, answer18, answer19, answer20]);
 
-const card6 = new Card(6,'let shape = {x: 100, y: 100} ' +
-    '//insert line here shape.show();' +
-    'What is the correct missing line in order for the console to show the following after running the whole code: 100 100,',
-    1, [answer21, answer22, answer23, answer24]);
+const card6 = new Card(6, 'Given the following code:\n\nlet shape = {x: 100, y: 100};\n//insert line here\nshape.show();\n\nWhat is the correct missing line in order for the console to show the following after running the whole code: 100 100,', 1, [answer21, answer22, answer23, answer24]);
 
-const card7 = new Card(7,'What is the correct way to access the height property in the building object ' +
-    '{ name: "Empire State Building", height: 443.2 }',
-    1, [answer25, answer26, answer27, answer28]);
+const card7 = new Card(7, 'What is the correct way to access the height property in the building object:\n\n{ name: "Empire State Building", height: 443.2 }', 1, [answer25, answer26, answer27, answer28]);
 
-const card8 = new Card(8, 'What is the correct way to check if a number is an integer in JavaScript?', 1,  [answer29, answer30, answer31, answer32]);
+const card8 = new Card(8, 'What is the correct way to check if a number is an integer in JavaScript?', 1, [answer29, answer30, answer31, answer32]);
 
-const card9 = new Card(9, 'What will appear on the console after executing the following code? 1. let shape1 = {x: 100, y: 200}; 2. let shape2 = shape1; 3. shape2.x = 0; 4. console.log(`${shape1.x} ${shape2.y}`);', 1, [answer33, answer34, answer35, answer36]);
+const card9 = new Card(9, 'What will appear on the console after executing the following code?\n\n1. let shape1 = {x: 100, y: 200};\n2. let shape2 = shape1;\n3. shape2.x = 0;\n4. console.log(`${shape1.x} ${shape2.y}`);', 1, [answer33, answer34, answer35, answer36]);
 
-const card10 = new Card(10, 'What will be the value of foo after executing the following code: let obj = {a: 1}; let foo = obj; obj.a = 2;', 1, [answer37, answer38, answer39, answer40]);
+const card10 = new Card(10, 'What will be the value of foo after executing the following code:\n\nlet obj = {a: 1};\nlet foo = obj;\nobj.a = 2;', 1, [answer37, answer38, answer39, answer40]);
 
 const card11 = new Card(11, 'What is the correct way to define an object "person" with properties "firstName", "lastName", and "age"?', 1, [answer41, answer42, answer43, answer44]);
 
