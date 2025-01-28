@@ -147,12 +147,41 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s;
+    position: relative; /* Required for ripple effect */
+    overflow: hidden; /* Hide overflow from the ripple */
+    display: inline-block; /* Required for transform to work */
+    padding: 5px 10px; /* Add padding for better visual feedback */
+    border-radius: 5px; /* Optional: Add rounded corners */
 }
 
 nav ul li a:hover {
     color: #1abc9c;
-   /* color:  #d4e157*/
+}
+
+/* Ripple effect */
+nav ul li a span {
+    position: relative;
+    z-index: 1; /* Ensure text is above the ripple */
+}
+
+nav ul li a:active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5); /* Ripple color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple 0.5s ease-out;
+}
+
+@keyframes ripple {
+    to {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
 }
 #questionId{
      color: #1abc9c;
@@ -170,6 +199,10 @@ nav ul li a:hover {
     text-align: center;
     margin-bottom: 20px;
 }
+
+
+
+
 
 /* Change the selection color for all elements */
 ::selection {

@@ -112,7 +112,7 @@ checkBtn.addEventListener("click", (e) => {
     if(globalUserChoice === globalCorrectAnswer ) {
         alert("Correct!");
     } else {
-        alert("Wrong Answer!");
+        alert("Wrong!");
     }
 })
 
